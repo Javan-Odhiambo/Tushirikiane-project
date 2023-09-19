@@ -40,7 +40,7 @@ env:
   USE_SQLITE: True
   SECRET_KEY: testsecretkey
   ALLOWED_HOSTS: 127.0.0.1,localhost,example.com
-  DJANGO_SETTINGS_MODULE: config.settings.local
+  DJANGO_SETTINGS_MODULE: config.settings
 
 
 # ==============================================================================
