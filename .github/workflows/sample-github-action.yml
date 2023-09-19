@@ -71,7 +71,7 @@ jobs:
           python-version: 3.x
       
       - name: Install dependancies
-        run: pip install -r ./requirements/local.txt
+        run: pip install -r ./requirements.txt
 
       - name: Start test
         run: python manage.py test apps/
