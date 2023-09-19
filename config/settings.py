@@ -105,6 +105,17 @@ if config("USE_SQLITE", default=False, cast=bool):
     }
 elif config("DATABASE_URL"):
     DATABASES = {"default": config("DATABASE_URL", cast=db_url)}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": env("DB_NAME", default="postgres"),
+            "USER": env("DB_USER", default="postgres"),
+            "PASSWORD": env("DB_PASS", default="postgres"),
+            "HOST": env("DB_HOST", default="db"),
+            "PORT": env.int("DB_PORT", default=5432),
+        }
+    }
 
 
 
