@@ -78,7 +78,7 @@ jobs:
                 echo DB_HOST=${{ env.DB_HOST }} >> .env
                 echo DB_PORT=${{ env.DB_PORT }} >> .env
                 echo DB_NAME=${{ env.DB_NAME }} >> .env
-                echo DJANGO_SETTINGS_MODULE="config.settings.test" >> .env
+                echo DJANGO_SETTINGS_MODULE="config.settings" >> .env
 
 
             # Builds the images and runs the tests then exits when done
